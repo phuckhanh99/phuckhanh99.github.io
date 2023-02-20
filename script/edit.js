@@ -34,13 +34,13 @@ function renderEdit(petArr) {
     <i class="bi bi-square-fill" style="color: ${e.color}"></i>
     </td>
     <td><i class="${
-      e.vaccinated === true ? "bi bi-check-circle-fill" : 0
+      e.vaccinated === true ? "bi bi-check-circle-fill" : "bi-x-circle-fill"
     }"></i></td>
     <td><i class="${
-      e.dewormed === true ? "bi bi-check-circle-fill" : 0
+      e.dewormed === true ? "bi bi-check-circle-fill" : "bi-x-circle-fill"
     }"></i></td>
     <td><i class="${
-      e.sterilized === true ? "bi bi-check-circle-fill" : 0
+      e.sterilized === true ? "bi bi-check-circle-fill" : "bi-x-circle-fill"
     }"></i></td>
     <td>${e.date}</td>
     <td>
