@@ -284,6 +284,7 @@ function EditPet(i) {
 
     if (validate) {
       petArr[i] = data;
+      saveToStorage("petArr", JSON.stringify(petArr));
       renderEdit(petArr);
     }
   };
