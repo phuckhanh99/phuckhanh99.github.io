@@ -76,15 +76,14 @@ const submitFind = function () {
   function findPet(e) {
     // điều kiện để tìm pet
     return (
-      e.id.includes(`${data.id}`) && //dùng includes để lọc kí tự trong string
-      data.id &&
-      data.petName &&
-      e.petName.includes(`${data.petName}`) &&
-      e.type === data.type &&
-      e.breed === data.breed &&
-      e.vaccinated === data.vaccinated &&
-      e.sterilized === data.sterilized &&
-      e.dewormed === data.dewormed
+     (e.id.includes(`${data.id}`) || //dùng includes để lọc kí tự trong string
+        !data.id) &&
+      (!data.petName || e.petName.includes(`${data.petName}`)) &&
+      (e.type === data.type || data.type === "Select Type") &&
+      (e.breed === data.breed || data.breed === "Select Breed") &&
+      (e.vaccinated === data.vaccinated || !data.vaccinated) &&
+      (e.sterilized === data.sterilized || !data.sterilized) &&
+      (e.dewormed === data.dewormed || !data.dewormed)
     );
   }
   renderTableData(petArr.filter(findPet));
