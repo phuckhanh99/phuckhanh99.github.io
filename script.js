@@ -75,7 +75,7 @@ function renderTableData(petArr) {
       <td>
       <i class="bi bi-square-fill" style="color: ${e.color}"></i>
       </td>
-      <td><i class="${
+     <td><i class="${
         e.vaccinated === true ? "bi bi-check-circle-fill" : "bi-x-circle-fill"
       }"></i></td>
       <td><i class="${
